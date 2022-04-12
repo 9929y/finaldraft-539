@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+	<!-- You do not need to make any changes to this file, but
+	you should still review the tags to make sure that you
+	are familiar with them. -->
+
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the icon -->
+	<script src="https://kit.fontawesome.com/fc12f56c38.js" crossorigin="anonymous"></script>
+    <!-- Link to the font -->
+	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDBNZRZ45H"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-MDBNZRZ45H');
+    </script>
+	<title>Contact with me</title>
+</head>
+
+<body>
+	<!--Skip to Main Content-->
+	<!-- Header is a sematic tag page that aids readability -->
+	<header>
+		
+		<!-- Nav is a sematic tag page that aids accessibility -->
+		
+		<div class="navbar">
+		    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+			 
+			 <div class="navigation">
+			 <nav >
+			   <ul id="menulist">
+				<!-- Since I am on the index file I added class = action to the link to index. -->
+				 <li><a href = "index.html" >Overview</a></li>
+				 <li><a href = "jacqudesign.html">Jacquemus</a></li>
+				 <li><a href = "simonedesign.html">Simone Rocha</a></li>
+				 <li><a href = "jildesign.html">Jil Sander</a></li>
+				 <li class="active"><a href = "form.html" >Contact</a></li>
+				</ul>
+			 </nav>
+				<i class="fa-regular fa-rectangle-list" onclick="togglemenu()"></i>
+			</div>
+			 
+	    
+		</div>
+	
+	</header>
+		<!-- The h1 is a semantic tag that aids accessibility -->
+	<main class="container" id="main">
+		<h1>My design</h1>
+	    <h2>"reframe of minimalism"</h2>
+		<div class="detailed">
+		 <p>
+		  Below gallery is my design work to interpret minimalism. Feel free to contact with me with the contact form below;)
+	     </p>
+		</div>
+		<div class="box">
+			<div class="runway">
+			    <img src="images/mydesign1.jpeg" alt="womenswear: light yellow suits with knots">
+				<img src="images/mydesign2.jpg" alt="two womenswear: light yellow organza">
+				<img src="images/mydesign3.jpg" alt="womenswear: mixed color puff garment">
+				<img src="images/mydesign4.jpg" alt="womenswear puff piece: grey garment">
+             </div>
+			 <div class="runway">
+				<img src="images/mydesign6.jpg" alt="womenswear: mixed color puff garment in rock">
+				<img src="images/mydesign5.jpg" alt="two omenswear: medium close shoot for garment detail">
+				<img src="images/mydesign12.jpg" alt="womenswear:color contrast piece with fashion model">
+				<img src="images/mydesign10.jpg" alt="womenswear: mixed dyed puff organza garment">
+             </div>
+			 <div class="runway">
+				<img src="images/mydesign7.jpg" alt="two womenswear: satin brown suites for women">
+				<img src="images/mydesign8.jpg" alt="long-shoot for women's ocean photo">
+				<img src="images/mydesign11.jpg" alt="two womean lean on each other for presenting garment">
+				<img src="images/mydesign9.jpg" alt="two womenswear: mixed color puff garment on the ocean side">
+            </div>
+	    </div>
+
+
+		<form onsubmit="sendEmail()">
+			<fieldset>
+	
+				<h2>Lets Have a Wonderful Chat~</h2>
+			  
+				<label for="name_id">Your Name</label>
+				<input type="text" placeholder="Enter Name" id = "name_id" name="name" required>
+			  
+				<label for="email_id">Your E-mail</label>
+				<input type="email" placeholder="Enter E-mail" id = "email_id" name="email" required>
+			  
+				<label for="phone">Your Phone Number</label>
+                <input type="tel" placeholder="+00 000 000 000" id="phone" accesskey="t" minlength="13" autocomplete="tel" required/>
+			  
+				<label for="msg">Leave a Message</label>
+				<textarea placeholder="Enter Message" id = "msg" name="mesg" required></textarea><br>
+
+				  
+			      
+			    <input type="Submit" value = "Nice to Meet You !">
+			</fieldset>
+		</form>
+
+	</main>
+         
+
+ <footer>
+	<p>Great Fashion Designer &copy; 2022</p>
+ </footer>
+
+
+	
+ <script>
+		var menulist = document.getElementById("menulist");
+		menulist.style.maxHeight = "0px";
+		function togglemenu(){
+			if(menulist.style.maxHeight == "0px")
+			 {
+				menulist.style.maxHeight = "200px";
+			 }
+			else
+			 {
+				menulist.style.maxHeight = "0px";
+			 }
+		}
+
+ </script>
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
+ <script>
+	 function sendEmail(){
+		Email.send({
+		Host : "smtp.gmail.com",
+		Username : "yanglqqing@gmail.com",
+		Password : "18905279766@ylqq",
+		To : 'yanglqq@umich.edu',
+		From : document.getElementById("email").value,
+		Subject : "New contact form inquiry",
+		Body : "Name: "+content.getElementById("name_id").value
+			+"<br> Email: "+ document.getElementById("email_id").value
+			+"<br> Phone no: "+document.getElementById("phone").value
+			+"<br> message:"+ document.getElementById("mesg").value
+	}).then(
+	message => alert("Message send success")
+	);
+	 }
+ </script>
+	
+</body>
+</html>
